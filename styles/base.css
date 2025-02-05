@@ -1,0 +1,158 @@
+@font-face {
+  font-family: "Inter-Regular";
+  src: url("../fonts/Inter_18pt-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Inter-Bold";
+  src: url("../fonts/Inter_18pt-Bold.ttf");
+}
+
+:root {
+  --regular-font: "Inter-Regular", serif;
+  --bold-font: "Inter-Bold", serif;
+
+  --main-color: #ff7b54;
+  --secondary-color: #ffffff;
+  --main-text-color: #ffffff;
+  --secondary-text-color: #ff7b54;
+}
+
+body {
+  background-color: var(--main-color);
+  color: var(--main-text-color);
+  font-family: var(--regular-font);
+}
+
+body.speakers {
+  background-color: var(--secondary-color);
+  color: var(--secondary-text-color);
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/* header */
+.header {
+  display: grid;
+  grid-template-columns: 1fr 3fr 34px;
+  grid-template-rows: 1fr;
+  align-items: center;
+  padding: 0 60px 0 60px;
+}
+
+.header__logo {
+  font-size: 40px;
+  font-family: var(--bold-font);
+}
+
+.nav {
+  justify-items: end;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+}
+
+.nav__list-item {
+  font-size: 20px;
+  margin-inline-end: 36px;
+}
+
+.header svg:hover {
+  cursor: pointer;
+}
+
+.speakers svg g path {
+  fill: var(--secondary-text-color);
+}
+
+.header__menu {
+  display: none;
+}
+
+.header__menu path {
+  fill: var(--secondary-color);
+}
+
+.speakers .header__menu path {
+  fill: var(--main-color);
+}
+
+.header__close-menu {
+  display: none;
+}
+
+.header__close-menu g path {
+  fill: var(--secondary-color);
+}
+
+@media (max-width: 800px) {
+  .header {
+    padding: 0 5px 0 5px;
+  }
+}
+
+@media (max-width: 650px) {
+  .header {
+    grid-template-columns: 33px 1fr 34px;
+  }
+
+  .header__logo {
+    font-size: 20px;
+  }
+
+  .header__menu {
+    display: block;
+  }
+
+  .header__menu--hide {
+    display: none;
+  }
+
+  .header__close-menu--visible {
+    display: block;
+  }
+
+  .nav {
+    /* display: none; */
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--main-color);
+    top: 60px;
+    justify-items: baseline;
+    left: -100%;
+    transition: left 0.2s linear;
+  }
+
+  .nav--visible {
+    left: 0;
+  }
+
+  .body--no-overflow {
+    overflow: hidden;
+  }
+
+  .speakers .nav {
+    background-color: var(--secondary-color);
+  }
+
+  .nav__list {
+    height: 80%;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .nav__list-item {
+    font-size: 60px;
+    font-family: var(--bold-font);
+  }
+
+  .header__logo {
+    text-align: center;
+  }
+}

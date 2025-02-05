@@ -1,0 +1,142 @@
+@import url("./base.css");
+
+/* main body */
+.main-body {
+  margin-inline-start: 150px;
+}
+
+.main-body__title {
+  font-size: 128px;
+  font-family: var(--bold-font);
+  margin: 100px 0 0 0;
+}
+
+.main-body__subtitle {
+  font-size: 40px;
+  margin: 0;
+}
+
+@media (max-width: 1200px) {
+  .main-body__title {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 800px) {
+  .main-body {
+    margin-inline-start: 90px;
+  }
+
+  .main-body__title {
+    font-size: 60px;
+  }
+
+  .main-body__subtitle {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 650px) {
+  .main-body {
+    margin-inline-start: 15%;
+  }
+
+  .main-body__title {
+    font-size: 36px;
+  }
+
+  .main-body__subtitle {
+    font-size: 20px;
+  }
+}
+
+/* buttons */
+
+.main-body__buttons {
+  margin: 100px 0 200px -50px;
+  display: flex;
+  gap: 20px;
+}
+
+.main-body__buttons--buy {
+  height: 100px;
+  font-size: 32px;
+  font-family: var(--bold-font);
+  color: var(--secondary-text-color);
+  background-color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  padding: 0 64px;
+}
+
+.main-body__buttons--buy__image {
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.main-body__buttons--contact {
+  height: 100px;
+  font-size: 32px;
+  font-family: var(--bold-font);
+  color: var(--main-text-color);
+  background-color: var(--main-color);
+  border: 2px solid var(--secondary-color);
+  padding: 0 64px;
+}
+
+.main-body__buttons--buy:hover,
+.main-body__buttons--contact:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+}
+
+@media (max-width: 1200px) {
+  .main-body__buttons--buy {
+    height: 80px;
+  }
+
+  .main-body__buttons--contact {
+    height: 80px;
+  }
+}
+
+@media (max-width: 800px) {
+  .main-body__buttons {
+    margin: 50px 0 100px -20px;
+  }
+
+  .main-body__buttons--buy {
+    font-size: 20px;
+    height: 60px;
+  }
+
+  .main-body__buttons--buy__image {
+    width: 20px;
+  }
+
+  .main-body__buttons--contact {
+    font-size: 20px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 650px) {
+  .main-body__buttons {
+    margin: 40px 0 20px 0px;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .main-body__buttons--buy {
+    font-size: 14px;
+    height: 40px;
+  }
+
+  .main-body__buttons--buy__image {
+    width: 14px;
+  }
+
+  .main-body__buttons--contact {
+    font-size: 14px;
+    height: 40px;
+  }
+}

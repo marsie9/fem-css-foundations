@@ -1,0 +1,103 @@
+@import url("./base.css");
+
+.main {
+  margin-inline-start: 150px;
+  margin-bottom: 150px;
+}
+
+.main__title {
+  margin: 100px 0;
+  font-size: 128px;
+}
+
+.main__speakers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 150px;
+  row-gap: 100px;
+}
+
+.main__speakers__speaker {
+  width: 400px;
+}
+
+.main__speakers__speaker__photo {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 36px;
+}
+
+.main__speakers__speaker__photo--cropped {
+  object-position: top;
+}
+
+.main__speakers__speaker__name {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.main__speakers__speaker__company {
+  font-size: 24px;
+  margin-bottom: 32px;
+}
+
+.main__speakers__speaker__description {
+  font-size: 24px;
+}
+
+@media (max-width: 1200px) {
+  .main__title {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .main__title {
+    text-align: center;
+  }
+
+  .main__speakers {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+
+@media (max-width: 650px) {
+  .main {
+    margin-inline-start: 15%;
+  }
+
+  .main__title {
+    font-size: 36px;
+    text-align: start;
+  }
+
+  .main__speakers {
+    justify-items: baseline;
+  }
+
+  .main__speakers__speaker {
+    width: 300px;
+  }
+
+  .main__speakers__speaker__photo {
+    width: 250px;
+    height: 250px;
+  }
+
+  .main__speakers__speaker__name {
+    font-size: 24px;
+  }
+
+  .main__speakers__speaker__company {
+    font-size: 20px;
+  }
+
+  .main__speakers__speaker__description {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+}
